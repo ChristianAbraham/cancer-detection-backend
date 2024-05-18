@@ -1,0 +1,6 @@
+.env
+data-test-submissions
+submissions-model
+.zip
+node_modules
+.json

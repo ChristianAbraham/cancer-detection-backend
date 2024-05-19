@@ -1,8 +1,11 @@
-FROM node:18-LTS-alpine
+FROM node:18
 
 # Create app directory
 WORKDIR /app
 
+ENV PORT=3000
+ENV HOST=0.0.0.0
+ENV MODEL_URL=https://storage.googleapis.com/model-cancer-bucket-production/model.json
 
 # Copy package.json and package-lock.json for dependency management
 COPY package*.json ./
@@ -18,4 +21,3 @@ EXPOSE 3000
 
 # Start the server using the configured script
 CMD [ "npm", "run", "start" ]
-
